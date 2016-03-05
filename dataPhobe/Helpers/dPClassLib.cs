@@ -9,6 +9,7 @@ namespace dataPhobe.Helpers
     {
       public double getCompIntAnnual(double princBalance, double intRate, int compoundInterval, int investmentDuration)
         {
+	    // Global Viarible Declaration
             double P = princBalance;
             double r = intRate;
             int n = compoundInterval;
