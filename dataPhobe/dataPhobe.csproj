@@ -443,6 +443,7 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Controllers\DefaultController.cs" />
+    <Compile Include="Controllers\FinancialController.cs" />
     <Compile Include="Controllers\MainController.cs" />
     <Compile Include="Helpers\dPClassLib.cs" />
     <Compile Include="Helpers\HMTLHelperExtensions.cs" />
@@ -467,7 +468,7 @@
     <Content Include="Views\Shared\_Navigation.cshtml" />
     <Content Include="Scripts\jquery-1.10.2.min.map" />
     <Content Include="Views\Main\Index.cshtml" />
-    <Content Include="Views\Main\Financial.cshtml" />
+    <Content Include="Views\Financial\CompInterest.cshtml" />
     <Content Include="Vendor\animate.css\.bower.json" />
     <Content Include="Vendor\animate.css\.editorconfig" />
     <Content Include="Vendor\animate.css\animate-config.json" />

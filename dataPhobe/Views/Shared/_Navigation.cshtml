@@ -19,10 +19,18 @@
 
     <ul class="nav metismenu" id="side-menu">
         <li class="@Html.IsSelected(action: "Index")">
-            <a href="@Url.Action("Index", "Main")"> <span class="nav-label">Page 1</span>  </a>
+            <a href="@Url.Action("Index", "Main")"> <span class="nav-label">Home</span>  </a>
         </li>
-        <li class="@Html.IsSelected(action: "Page2")">
+        @*<li class="@Html.IsSelected(action: "Page2")">
             <a href="@Url.Action("Financial", "Main")"> <span class="nav-label">Financial</span> <span class="label label-success pull-right">New</span> </a>
+        </li>*@
+
+        <li class="@Html.IsSelected(controller: "Interface")">
+            <a href="#"><span class="nav-label">Financial</span><span class="fa arrow"></span> </a>
+            <ul class="nav nav-second-level">
+                <li class="@Html.IsSelected(action: "CompInterest")"><a href="@Url.Action("CompInterest", "Financial")">Compound Interest</a></li>
+                <li class="@Html.IsSelected(action: "Typography")"><a href="@Url.Action("Typography", "Interface")">Typography</a></li>
+            </ul>
         </li>
     </ul>
 </div>
