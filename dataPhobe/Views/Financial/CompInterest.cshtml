@@ -4,7 +4,7 @@
 
 <div class="content animate-panel">
     <div class="row">
-        <div class="col-lg-12">
+        <div class="col-lg-5">
             <div class="hpanel">
                 <div class="panel-heading">
                     <div class="panel-tools">
@@ -14,9 +14,18 @@
                     Compound Interest Calculator
                 </div>
                 <div class="panel-body">
-                    <form method="post">
-                        Principal balance: <input id="txtprincBalance" name="princBalance" type="text" /><br />
-                        Monthly Contribution: <input id="txtcontribAmt" name="contribAmt" type="text" /><br />
+                    <form method="post" class="form-horizontal">
+						<div class="form-group">
+							<label class ="col-sm-2 control-label">Principal Balance</label>
+							<div class="col-sm-10">
+								<input id="txtprincBalance" name="princBalance" type="text" />
+							</div>
+							<label class ="col-sm-2 control-label">Monthly Contribution</label>
+							<div class="col-sm-10">
+								<input id="txtcontribAmt" name="contribAmt" type="text" /><br />
+							</div>
+
+                    
                         Interest rate: <input id="txtintRate" name="intRate" type="text" /><br />
                         Number of times compounded anually: <input id="txtcompoundInterval" name="compoundInterval" type="text" /><br />
                         Number of years invested<input id="txtinvestmentDuration" name="investmentDuration" type="text" /><br />
@@ -37,7 +46,7 @@
                     Results
                 </div>
                 <div class="panel-body">
-         
+
                     <div id="subscriberCount" style="min-width: 400px; height: 400px;"></div>
                     <script src="https://code.jquery.com/jquery-1.9.1.js" integrity="sha256-e9gNBsAcA0DBuRWbm0oZfbiCyhjLrI6bmqAl5o+ZjUA=" crossorigin="anonymous"></script>
                     <script src="https://code.highcharts.com/highcharts.js"></script>
@@ -61,7 +70,7 @@
                         });
                     </script>
 
-                   
+
                 </div>
             </div>
         </div>
