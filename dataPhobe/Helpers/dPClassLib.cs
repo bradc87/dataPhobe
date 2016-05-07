@@ -25,8 +25,17 @@ namespace dataPhobe.Helpers
 
             for (int i = 1; i <= t; i++)
             {
+                DataRow legerRow = dt.NewRow();
+                double balanceAsOf = getCompIntWithContributions(pmt, P, r, k, n, i);
+
+                legerRow[0] = i;
+                legerRow[1] = balanceAsOf;
+
+                dt.Rows.Add(legerRow);
 
             }
+
+            return dt;
 
         }
 

@@ -16,6 +16,7 @@
                 <div class="panel-body">
                     <form method="post">
                         Principal balance: <input id="txtprincBalance" name="princBalance" type="text" /><br />
+                        Monthly Contribution: <input id="txtcontribAmt" name="contribAmt" type="text" /><br />
                         Interest rate: <input id="txtintRate" name="intRate" type="text" /><br />
                         Number of times compounded anually: <input id="txtcompoundInterval" name="compoundInterval" type="text" /><br />
                         Number of years invested<input id="txtinvestmentDuration" name="investmentDuration" type="text" /><br />
@@ -36,7 +37,31 @@
                     Results
                 </div>
                 <div class="panel-body">
-                    @ViewBag.CIResult
+         
+                    <div id="subscriberCount" style="min-width: 400px; height: 400px;"></div>
+                    <script src="https://code.jquery.com/jquery-1.9.1.js" integrity="sha256-e9gNBsAcA0DBuRWbm0oZfbiCyhjLrI6bmqAl5o+ZjUA=" crossorigin="anonymous"></script>
+                    <script src="https://code.highcharts.com/highcharts.js"></script>
+                    <script src="https://code.highcharts.com/modules/exporting.js"></script>
+
+                    <div id="subscriberCount" style="min-width: 310px; height: 400px; margin: 0 auto"></div>
+                    <script>
+                        var subCount;
+                        $(document).ready(function () {
+                            BillingPerformance = new Highcharts.Chart({
+                                chart: { renderTo: 'subscriberCount', defaultSeriesType: 'spline', zoomType: 'x', resetZoomButton: { position: { align: 'left', y: -10 } } },
+                                credits: { enabled: false },
+                                exporting: { enabled: false },
+                                title: { text: '' },
+                                xAxis: { },
+                                yAxis: { min: 0, title: { text: 'Customer Count' } },
+                                series: [{
+                                    data: [@ViewBag.chartData], name: 'Postpaid Subs', marker: { symbol: 'circle' }
+                                }]
+                            });
+                        });
+                    </script>
+
+                   
                 </div>
             </div>
         </div>
