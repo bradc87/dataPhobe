@@ -23,7 +23,7 @@ namespace dataPhobe.Controllers
         {
 
             dataPhobe.Helpers.dPEngine engine = new Helpers.dPEngine();
-            DataTable dt = engine.getCompIntWithContributionsLedger(contribAmt, princBalance, intRate, compoundInterval,compoundInterval,investmentDuration);
+            DataTable dt = engine.getCompIntWithContributionsLedger(contribAmt, princBalance, intRate, 12,compoundInterval,investmentDuration);
             DataTable dTab = new DataTable();
             ViewBag.chartData = genData(dt);
             return View();
