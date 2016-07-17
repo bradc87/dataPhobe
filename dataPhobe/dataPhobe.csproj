@@ -638,6 +638,7 @@
     <Folder Include="Content\img\" />
     <Folder Include="Icons\" />
     <Folder Include="Images\" />
+    <Folder Include="Vendor\jquery-ui\" />
   </ItemGroup>
   <ItemGroup>
     <TypeScriptCompile Include="Vendor\metisMenu\metismenu.d.ts" />
